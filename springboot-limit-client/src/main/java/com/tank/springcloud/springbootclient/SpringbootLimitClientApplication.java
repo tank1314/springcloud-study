@@ -1,11 +1,18 @@
 package com.tank.springcloud.springbootclient;
 
+import com.tank.springcloud.springbootclient.entity.OrderEntity;
+import com.tank.springcloud.springbootclient.enums.OrderEunm;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 限流框架：
@@ -21,6 +28,15 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class SpringbootLimitClientApplication {
 
     public static void main(String[] args) {
+        Map<OrderEunm, List<OrderEntity>> map = new HashMap<>();
+        List<OrderEntity> list = new ArrayList<>() ;
+        OrderEntity dataRow = new OrderEntity();
+        dataRow.setBuyer("1111");
+        dataRow.setGoodsId("2222");
+        dataRow.setOrderNo("3333");
+        list.add(dataRow);
+        map.put(OrderEunm.SIGN,list);
+
         SpringApplication.run(SpringbootLimitClientApplication.class, args);
     }
 
