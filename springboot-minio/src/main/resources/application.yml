@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: springboot-minio-client
+server:
+  port: 4400
+servlet:
+  multipart:
+  max-file-size: 100MB
+  max-request-size: 100MB
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka/
+  instance:
+    appname: springboot-minio-client
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}:${server.port}
+minio:
+  endpoint: http://127.0.0.1:9000
+  accessKey: minio
+  secretKey: minio@2022
+  bucketName: localbucket
+
+
