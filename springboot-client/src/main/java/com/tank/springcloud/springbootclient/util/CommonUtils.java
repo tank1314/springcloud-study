@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CommonUtils {
     public static void main(String[] args) {
-        String str = "ABCD";
+        /*String str = "ABCD";
         String str1 = "BCDE";
         String str2 = "CDEF";
         List<String> list = new ArrayList<>();
@@ -22,7 +22,32 @@ public class CommonUtils {
             System.out.println("111");
             System.out.println(dataFlag("cd2") );
         }
-        System.out.println("2222"+flag);
+        System.out.println("2222"+flag);*/
+
+        /*for (int i = 0; i < 5; i++) {
+            int j = i;
+            //System.out.println(j);
+            Boolean checkFlag = false;
+            for (int a = 0; a < 3; a++) {
+                if (a == j) {
+                    checkFlag = true;
+                    break;
+                }
+                System.out.println(a);
+            }
+            if (!checkFlag) {
+                System.out.println(j + "未匹配到数据");
+            }
+            System.out.println("======");
+        }*/
+
+        if (1 == 1 && 2 == 3) {
+            System.out.println("1111");
+        } else {
+            System.out.println("222");
+        }
+
+
     }
 
 
@@ -33,11 +58,11 @@ public class CommonUtils {
         return false;
     }
 
-    public static boolean dataFlag(String str){
-        if(str.contains("abc")){
-            return true ;
+    public static boolean dataFlag(String str) {
+        if (str.contains("abc")) {
+            return true;
         }
-        return false ;
+        return false;
     }
 
 

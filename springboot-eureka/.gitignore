@@ -2,7 +2,7 @@
 /target/
 /.idea/
 /.settings/
-/.vscode/
+/.vscode/pwd
 /bin/
 
 .classpath
