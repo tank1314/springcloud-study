@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: springboot-encrypt-client
+  encrypt:
+    key: 1234567890ABCDEF
+server:
+  port: 4500
+servlet:
+  multipart:
+  max-file-size: 100MB
+  max-request-size: 100MB
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka/
+  instance:
+    appname: springboot-encrypt-client
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
+    instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}:${server.port}
+
+
+
