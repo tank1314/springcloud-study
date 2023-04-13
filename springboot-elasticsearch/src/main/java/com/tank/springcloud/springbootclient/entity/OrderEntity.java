@@ -2,8 +2,8 @@ package com.tank.springcloud.springbootclient.entity;
 
 import java.io.Serializable;
 
-public class OrderEntity {
-    //private static final long serialVersionUID = 3636584634781009739L;
+public class OrderEntity implements Serializable {
+    private static final long serialVersionUID = 3636584634781009739L;
 
     private String id ;
     private String orderNo;

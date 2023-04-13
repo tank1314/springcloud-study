@@ -1,6 +1,6 @@
 package com.tank.springcloud.springbootclient.controller;
 
-import com.baozun.utilities.json.JsonUtil;
+import com.alibaba.fastjson.JSON;
 import com.tank.springcloud.springbootclient.commond.SiteVisitDTO;
 import com.tank.springcloud.springbootclient.commond.VisitReqDTO;
 import com.tank.springcloud.springbootclient.serivce.SiteManagerService;
@@ -32,7 +32,7 @@ public class SiteManagerController {
     @RequestMapping("/visit")
     public SiteVisitDTO visit(VisitReqDTO reqDTO) {
         SiteVisitDTO dto = siteManagerService.visit(reqDTO);
-        System.out.println(JsonUtil.writeValue(dto));
+        System.out.println(JSON.toJSONString(dto));
         return dto;
     }
 

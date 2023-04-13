@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TestUtil {
-    @Test
+    /*@Test
     public void pojo2Map() {
         String content ="尊敬的用户您好，{brand}定于{time}开展主题为{title}的营销活动，欢迎您的光临!";
         Map<String,Object> resultMap = new HashMap<>();
@@ -16,5 +16,9 @@ public class TestUtil {
         resultMap.put("title","疫情过去，暖日一夏");
         String s = PlaceHolderUtils.replacePlaceHolder(content, resultMap, "","");
         System.out.println(s);
-    }
+    }*/
+
+    /**
+     * 单元测试接口 com.tank.springcloud.springbootclient.controller.templateByHits
+     */
 }

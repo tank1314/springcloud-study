@@ -22,7 +22,7 @@ import java.io.IOException;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringbootLimitClientApplication.class)
+@SpringBootTest(classes = SpringbootElasticSearcApplication.class)
 public class SpringbootClientApplicationTests {
 
     @Autowired

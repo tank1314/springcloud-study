@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-elasticsearch
+  elasticsearch:
+    rest:
+      uris:
+        - http://127.0.0.1:9200
+        - http://127.0.0.1:9201
+        - http://127.0.0.1:9202
+server:
+    port: 9090

@@ -1,7 +1,6 @@
 package com.tank.springcloud.springbootclient.controller;
 
-import com.baozun.utilities.json.JsonUtil;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.alibaba.fastjson.JSON;
 import com.tank.springcloud.springbootclient.util.RedisClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,7 +49,7 @@ public class RedisController {
     public String range() {
         Set<String> result = redisClient.range("demo-sit", 0, -1);
         System.out.println(result);
-        String resultStr = JsonUtil.writeValue(result);
+        String resultStr = JSON.toJSONString(result);
         return resultStr;
     }
 

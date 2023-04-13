@@ -1,7 +1,7 @@
 package com.tank.springcloud.springbootclient.util;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.tuple.Immutablepair;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import java.net.URI;
 
